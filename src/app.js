@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const root = router.get('/', (req, res, next) => {
 	res.status(200).send({
-		title: "Node Store API",
+		title: "Learning Node.js API",
 		version: "0.0.1"
 	});
 });
@@ -38,20 +38,3 @@ app.use('/', update);
 app.use('/', destroy);
 
 module.exports = app;
-
-// var amphtmlValidator = require('amphtml-validator');
-// var fs = require('fs');
-
-// amphtmlValidator.getInstance().then(function (validator) {
-//   var input = fs.readFileSync('reviewed/24417.html', 'utf8');
-//   var result = validator.validateString(input);
-//   ((result.status === 'PASS') ? console.log : console.error)(result.status);
-//   for (var ii = 0; ii < result.errors.length; ii++) {
-//     var error = result.errors[ii];
-//     var msg = 'line ' + error.line + ', col ' + error.col + ': ' + error.message;
-//     if (error.specUrl !== null) {
-//       msg += ' (see ' + error.specUrl + ')';
-//     }
-//     ((error.severity === 'ERROR') ? console.error : console.warn)(msg);
-//   }
-// });
